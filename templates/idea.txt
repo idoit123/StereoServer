@@ -1,9 +1,0 @@
-Gebruik helios site om link in te geven
-ssh op boxpc nr helios en run die website. zorg dat website dingen afspeelt als link ingegeven
-^ Dat gaat niet want helios kan alleen via VPN
-
-Dus gwn zelf webserver implementeren via python
-
-mss ook zoekterm laten ingeven en dan eerste resultaat kiezen
-
-

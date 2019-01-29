@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Play some music!</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" src="{{url_for('static', filename='style.css')}}"> prolly incorrect? idk -->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="{{url_for('static', filename='servercode.js')}}"></script>
+
+    <!-- Enable zooming on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<div class="form-group">
+  <label for="urlToSubmit">Insert url here:</label>
+  <input type="text" class="form-control" id="urlToSubmit">
+</div>
+<div>
+    <button id="pausebutton" type="button" class="btn btn-secondary">Play/Pause</button>
+    <button id="submitbutton" type="button" class="btn">Submit URL</button>
+</div>
+<div>
+  <div class="slidecontainer">
+    <input id="volumeslider" type="range" min="1" max="100" value="50" class="slider">
+  </div>
+</div>
+
+</body>
+</html>
