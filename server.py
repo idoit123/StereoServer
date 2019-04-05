@@ -23,27 +23,27 @@ def execute_action(data):
     elif data['action'] == "toggle":
         togglePlayPause()
     elif data['action'] == "volume":
-        print('ok')
         setVolume(data['volume'])
+    elif data['action'] == "stop":
+        closePlayer()
 
 def setVolume(volume):
-    os.system('vlc-ctrl volume ' + volume + '%')
-
+    newvol=str(int(volume)+20)
+    os.system('vlc-ctrl volume ' + newvol + '%')
 
 def togglePlayPause():
     os.system('vlc-ctrl toggle')
 
 def playtune(url):
     #Kill process that was running
-    os.system('vlc-ctrl quit')
+    closePlayer()
 
     #Start new instance
-    #The following is SUPER unsafe but oh well.
-    #It also doesn't work bc killing mpsyt doesn't end the video apparently bc that runs in VLC...
-    #Find a way to kill a running process but only if it's mpyt.
     print("executing: "+'mpsyt playurl '+url)
     os.system('mpsyt playurl '+url)
 
+def closePlayer():
+    os.system('vlc-ctrl quit')
 
 
 #
